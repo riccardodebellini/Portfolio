@@ -1,0 +1,80 @@
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion"
+
+import {ExternalLink, Github as GitHubIcon, Info} from 'lucide-react'
+import {Alert, AlertDescription} from "@/components/ui/alert";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Separator} from "@/components/ui/separator";
+import Link from "next/link";
+
+# Onboard
+<div className="not-prose mb-12">
+<div className='grid grid-cols-3 gap-2 py-4'>
+    <Button variant="default" className="w-full mb-2 col-span-3 sm:col-span-2" asChild>
+        <Link href="https://mytomes.vercel.app"><ExternalLink className="ml-2 w-4 h-4" />Visita</Link>
+    </Button>
+    <Button variant="outline" className="w-full col-span-3 sm:col-span-1" asChild>
+        <Link href="https://github.com/riccardodebellini/mytomes"><GitHubIcon className="ml-2 w-4 h-4  " />Repository</Link>
+    </Button>
+</div>
+    <Separator className='w-full'/>
+</div>
+
+<div className="not-prose my-8">
+    <Alert variant="destructive">
+        <AlertDescription >
+    <Accordion type="single" collapsible  className='w-full' >
+        <AccordionItem value="item-1" className=''>
+            <AccordionTrigger className="text-left"><span className="flex items-center"><Info className="shrink-0 mr-2 h-4 w-4" />DISCLAIMER - PROGETTO EDUCATIVO</span></AccordionTrigger>
+            <AccordionContent>
+    Questo progetto è stato sviluppato esclusivamente a **scopi educativi e dimostrativi**. Pur mirando a fornire informazioni utili sul trasporto pubblico di Milano, si basa su fonti di dati, tra cui l'estrazione di informazioni da `giromilano.atm.it`.
+
+    **I termini di servizio di ATM (Azienda Trasporti Milanesi) relativi all'utilizzo dei dati non sono esplicitamente chiari e questo progetto potrebbe potenzialmente violarli.**
+
+    Pertanto:
+    - **Utilizzare a proprio rischio e pericolo:** Non garantiamo l'accuratezza o la continua disponibilità dei dati, né ci assumiamo la responsabilità per eventuali conseguenze derivanti dal loro utilizzo.
+    - **Interruzione non programmata:** Questo progetto, o parti di esso, potrebbero essere interrotti o non funzionare in modo imprevisto se le policy di ATM dovessero cambiare o se le fonti dei dati dovessero diventare inaccessibili.
+
+    Si consiglia cautela e comprensione di queste limitazioni.
+    </AccordionContent>
+        </AccordionItem>
+    </Accordion></AlertDescription>
+    </Alert>
+</div>
+Benvenuti al **Progetto Onboard**, il vostro compagno ideale per la navigazione sui trasporti pubblici a Milano! 🇮🇹 Questa iniziativa open source mira a fornire un'esperienza completa, in tempo reale e intuitiva sia per i pendolari che per i visitatori.
+
+## 🌟 Cos'è Onboard?
+
+Onboard è un'applicazione multipiattaforma progettata per rendere il vostro viaggio a Milano fluido e senza intoppi. Offre:
+
+* **Informazioni in tempo reale:** Ricevi aggiornamenti in tempo reale sugli arrivi dei mezzi pubblici e sui tempi di attesa.
+* **Mappa interattiva:** Esplora tutte le fermate e le linee dei trasporti pubblici su una mappa personalizzata e dettagliata di Milano.
+* **Dati completi:** Accedi alle informazioni sia sui trasporti di superficie (autobus, tram) che sulle linee della metropolitana.
+* **Disponibilità multipiattaforma:** Utilizza Onboard su Windows, Android e Web.
+
+## ⚙️ Come funziona
+
+L'ecosistema Onboard si basa su un'architettura solida, che combina diverse tecnologie per fornire informazioni accurate e tempestive:
+
+1. **Data Sourcing:** Le informazioni vengono meticolosamente estratte da `giromilano.atm.it` e integrate con fonti di dati aperte.
+2. **Backend Python Vercel:** Un potente server Python elabora e gestisce questi dati, garantendo efficienza e scalabilità.
+3. **Mappe raster personalizzate:** Tile raster uniche e performanti, ospitate su GitHub, offrono un'esperienza di mappa accattivante e informativa.
+4. **Client Flutter:** L'applicazione front-end, sviluppata con Flutter, elabora i dati e riproduce l'interfaccia utente su più piattaforme.
+
+## 🚀 La nostra visione
+
+Il nostro obiettivo è creare l'app di trasporto pubblico più affidabile e intuitiva per Milano, sfruttando i principi open source e i contributi della comunità. Crediamo che informazioni migliori sul trasporto portino a esperienze urbane migliori.
+
+## 📚 Panoramica del repository
+
+Il progetto Onboard è organizzato in diversi repository, ognuno con uno scopo specifico:
+
+* [`onboard-project/client`](https://github.com/onboard-project/client): L'applicazione Flutter, disponibile per Windows, Android e Web. 
+<Badge className='not-prose'>Coming Soon</Badge>
+* [`onboard-project/server`](https://github.com/onboard-project/server): Il backend Python di Vercel per l'elaborazione dei dati in tempo reale e il servizio API.
+* [`onboard-project/sdk`](https://github.com/onboard-project/sdk): Pacchetto Dart per l'utilizzo e la modellazione dei dati dal server Onboard.
+* [`onboard-project/maps`](https://github.com/onboard-project/maps): Contiene le tessere delle mappe raster personalizzate e gli strumenti di generazione.
+* [`onboard-project/stopsgen`](https://github.com/onboard-project/stopsgen): Script Python per la generazione di dati consolidati sulle fermate del trasporto pubblico.
+* [`onboard-project/.github`](https://github.com/onboard-project/.github): Configurazione centrale e file README principale di questa organizzazione.
+
+Questo progetto è concesso con licenza GNU GPL v3.0.

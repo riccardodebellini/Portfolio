@@ -1,0 +1,68 @@
+import {ProjectCarousel} from "@/components/project-carousel";
+import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert"
+import {Button} from "@/components/ui/button";
+import {Separator} from "@/components/ui/separator";
+import {ExternalLink, Github as GitHubIcon} from "lucide-react";
+import Link from "next/link";
+
+# MyTomes
+**Gestisci la tua biblioteca di casa con facilità!**
+
+MyTomes è un'applicazione Flutter intuitiva che ti permette di organizzare e tenere traccia della tua collezione personale di libri. Catalogare i tuoi libri non è mai stato così facile.
+
+<div className="not-prose mb-12">
+    <ProjectCarousel
+        webImages={["/mytomes-screenshots/web-1.png", "/mytomes-screenshots/web-2.png", "/mytomes-screenshots/web-3.png", "/mytomes-screenshots/web-4.png"]}
+        mobileImages={["/mytomes-screenshots/mobile-1.png", "/mytomes-screenshots/mobile-2.png", "/mytomes-screenshots/mobile-3.png", "/mytomes-screenshots/mobile-4.png"]}
+    />
+    <div className='grid grid-cols-3 gap-2 py-4'>
+        <Button variant="default" className="w-full mb-2 col-span-3 sm:col-span-2" asChild>
+            <Link href="https://mytomes.vercel.app"><ExternalLink className="ml-2 w-4 h-4" />Visita</Link>
+        </Button>
+        <Button variant="outline" className="w-full col-span-3 sm:col-span-1" asChild>
+            <Link href="https://github.com/riccardodebellini/mytomes"><GitHubIcon className="ml-2 w-4 h-4  " />Repository</Link>
+        </Button>
+    </div>
+    <Separator className='w-full'/>
+</div>
+
+
+## 📱 Funzionalità:
+
+- **Gestione libri:**
+    Aggiungi libri inserendo dettagli come titolo, autore, data di pubblicazione e molto altro.
+
+- **Preferiti:**
+    Aggiungi una valutazione a ciascun libro e ordinali in base al tuo gradimento.
+
+- **Monitoraggio della posizione:**
+    Assegna la posizione ai tuoi libri, sugli scaffali, in prestito o imballati.
+    Ordina per posizione per trovare facilmente libri specifici o identificare quelli smarriti.
+
+- **Protezione della privacy:**
+    Accedi con il tuo account per proteggere meglio la tua collezione
+
+- **Precompila i campi con Google Books**
+    Ottieni campi precompilati con titolo, data di pubblicazione, trama e molto altro in pochi clic
+
+- **Interfaccia utente accattivante e intuitiva:**
+    Design moderno e accattivante per un'esperienza utente piacevole, conforme alle linee guida Material You 3 di Google.
+    Layout pulito e organizzato per una facile navigazione e accesso alle informazioni.
+
+## 🔮 Potenziali aggiornamenti futuri:
+
+<div className="not-prose mb-12">
+    <Alert variant="default">
+        <AlertTitle>Importante</AlertTitle>
+        <AlertDescription>
+            Queste sono solo potenziali nuove funzionalità.
+            Potrebbero non essere implementate affatto, a breve o come descritto qui
+        </AlertDescription>
+    </Alert>
+</div>
+
+
+- Modifica le informazioni sui libri per mantenere aggiornata la tua biblioteca.
+- Sistema di monitoraggio dei prestiti per tenere traccia dei libri presi in prestito e delle date di scadenza. - Colori e temi personalizzabili per personalizzare l'aspetto della tua app.
+- Scansione ISBN per aggiungere facilmente libri tramite la fotocamera del tuo smartphone.
+- Generazione di codici a barre per l'etichettatura fisica dei libri e un più facile tracciamento della posizione.

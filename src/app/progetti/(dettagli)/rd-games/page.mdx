@@ -1,0 +1,69 @@
+import {ProjectCarousel} from "@/components/project-carousel";
+import {Separator} from "@/components/ui/separator";
+import {Button} from "@/components/ui/button";
+import {ExternalLink} from "lucide-react";
+import Link from "next/link";
+
+# RD App Store
+Una collezione nostalgica di minigiochi arcade sviluppati con Scratch durante le scuole medie.
+
+{/*
+Nota: Sostituisci i percorsi delle immagini con i tuoi screenshot reali.
+Ho ipotizzato dei nomi file basati sui giochi presenti.
+*/}
+<div className="not-prose mb-12">
+    <ProjectCarousel
+        webImages={[
+            "/rd-game-screenshots/web-1.png",
+            "/rd-game-screenshots/web-2.png",
+            "/rd-game-screenshots/web-3.png",
+            "/rd-game-screenshots/web-4.png",
+
+        ]}
+        mobileImages={[
+            "/rd-game-screenshots/mobile-1.png",
+            "/rd-game-screenshots/mobile-2.png",
+            "/rd-game-screenshots/mobile-3.png",
+        ]}
+    />
+    {/* Bottoni Call to Action */}
+    <div className='grid grid-cols-3 gap-2 py-4'>
+        <Button variant="default" className="w-full mb-2 col-span-3 " asChild>
+            <Link href="https://sites.google.com/view/rdgame/home"><ExternalLink className="ml-2 w-4 h-4" />Visita il Sito</Link>
+        </Button>
+        {/* 
+            Nota: Se non hai un repo pubblico per questo (essendo Google Sites/Scratch), 
+            puoi rimuovere questo bottone o linkare al tuo profilo generale.
+        */}
+    </div>
+    <Separator className='w-full mt-4'/>
+</div>
+
+## 🕹️ Il Progetto
+Benvenuti nel **RD App Store**, un portale web che funge da capsula del tempo per i miei primi passi nel mondo dello sviluppo. Ospitato su Google Sites, questo progetto raccoglie una serie di videogiochi creati originariamente con **Scratch**.
+
+Non si tratta solo di codice, ma di **nostalgia pura**: qui troverete titoli sviluppati con l'entusiasmo (e l'ingenuità) delle scuole medie. Il sito avvisa onestamente i visitatori: *"Ci saranno sicuramente dei bug o dei vuoti"*, un disclaimer che aggiunge carattere a questa esperienza retrogaming amatoriale.
+
+## 🎮 I Giochi Disponibili
+Il portale offre diversi titoli giocabili direttamente via browser o scaricabili, ognuno con le sue meccaniche uniche:
+
+- **🏓 Pong**: Una rivisitazione del classico arcade.
+- **🚁 Scappa dall'elicottero**: Un gioco di fuga ad alta tensione.
+
+    L'obiettivo è evitare gli ostacoli usando il mouse o il timone.
+
+- **🐢 Insalata di Meduse**: Un titolo originale e caotico.
+
+    Devi acchiappare le meduse evitando di prenderne troppe.
+
+- **🚔 Polizia Stradale**: Un simulatore di controllo traffico dove i riflessi sono tutto.
+
+## 🛠️ Stack Tecnologico
+Essendo un progetto storico/amatoriale, lo stack riflette gli strumenti accessibili in ambito scolastico:
+
+- **Piattaforma**: [Google Sites](https://sites.google.com/) (CMS e Hosting)
+- **Game Engine**: [Scratch](https://scratch.mit.edu/) (Logica a blocchi)
+- **Formato**: Embed HTML realizzati con turbopack
+
+## 📚 Curiosità
+Il sito include una pagina di **Supporto** dedicata, dimostrando un'attenzione all'esperienza utente. È un esempio perfetto di come la passione per il "creare cose" possa iniziare con strumenti semplici.

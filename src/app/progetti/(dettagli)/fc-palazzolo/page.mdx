@@ -1,0 +1,43 @@
+import {ProjectCarousel} from "@/components/project-carousel";
+import {Separator} from "@/components/ui/separator";
+
+# Gestionale FC Palazzolo
+
+Un'applicazione web per digitalizzare e semplificare la logistica del materiale sportivo.
+
+<div className="not-prose mb-12">
+    <ProjectCarousel
+        webImages={["/fcpalazzolo-screenshots/web-1.png", "/fcpalazzolo-screenshots/web-2.png",]}
+        mobileImages={["/fcpalazzolo-screenshots/mobile-1.png", "/fcpalazzolo-screenshots/mobile-2.png",]}
+    />
+
+    <Separator className='w-full mt-4'/>
+</div>
+
+## Il Progetto
+
+Questo gestionale nasce per risolvere un problema pratico dell'FC Palazzolo: raccogliere gli ordini di materiale sportivo da atleti e genitori in modo ordinato ed efficiente.
+
+Invece di affidarsi a moduli cartacei o messaggi sparsi, l'applicazione offre un'interfaccia moderna che centralizza le richieste. Il sistema è progettato per essere autonomo e facile da manutenere, utilizzando Google Sheets non solo come database per salvare gli ordini, ma anche come "pannello di amministrazione" per aggiornare il catalogo prodotti senza toccare il codice.
+
+## Funzionalità Principali
+
+Il sistema unisce una UX curata per l'utente finale a una gestione semplificata per la società:
+
+- **Catalogo Dinamico**: I prodotti disponibili (taglie, prezzi, modelli) vengono caricati in tempo reale da un foglio Google. La società può aggiungere o rimuovere articoli dal foglio e il sito si aggiorna automaticamente.
+- **Automazione Post-Ordine**: Una volta inviato il modulo, il sistema gestisce le comunicazioni in autonomia:
+  - Genera un **ID Ordine univoco** essenziale per il ritiro in magazzino.
+  - Invia una **mail di riepilogo** al genitore contenente l'elenco dei prodotti e le istruzioni per il pagamento compilate dinamicamente (es. genera la causale corretta).
+- **Carrello Intelligente**:
+  - Calcolo del totale in tempo reale.
+  - Gestione logica del **"Kit Iniziale"**: permette ai nuovi iscritti di selezionare il pacchetto base a costo zero, distinguendolo dagli ordini standard.
+- **Integrazione Google Apps Script (GAS)**: Un backend leggero e serverless che funge da ponte (API) tra il form web, il foglio di calcolo e il sistema di invio mail.
+- **Interfaccia Responsive**: Grazie a Shadcn UI e Tailwind, il modulo è facilmente utilizzabile da smartphone, il dispositivo principale utilizzato dai genitori a bordo campo.
+
+## Stack Tecnologico
+
+Una soluzione moderna che massimizza l'efficienza a costi di gestione nulli:
+
+- **Frontend**: [Next.js](https://nextjs.org/) e [TypeScript](https://www.typescriptlang.org/) per robustezza e velocità.
+- **UI/UX**: [Tailwind CSS](https://tailwindcss.com/) e componenti [shadcn/ui](https://ui.shadcn.com/).
+- **Backend & Database**: [Google Sheets](https://www.google.com/sheets/about/) potenziato da [Google Apps Script](https://www.google.com/script/start/).

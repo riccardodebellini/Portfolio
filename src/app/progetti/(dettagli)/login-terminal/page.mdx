@@ -1,0 +1,29 @@
+import {Button} from "@/components/ui/button";
+import {Separator} from "@/components/ui/separator";
+import {ExternalLink, Github as GitHubIcon} from "lucide-react";
+import Link from "next/link";
+
+
+# Login Terminal
+
+
+Il Terminale di accesso è una simulazione di autenticazione personalizzabile progettata per migliorare l'esperienza di gioco nel mondo reale. Funge da meccanismo di blocco digitale per Escape Room e installazioni interattive, visualizzando un payload specifico (testo/indizi) solo dopo l'autenticazione.
+<div className="not-prose mb-12">
+    <div className='grid grid-cols-3 gap-2 py-4'>
+        <Button variant="default" className="w-full mb-2 col-span-3 sm:col-span-2" asChild>
+            <Link href="https://labs.riccardo.is-a.dev/login-terminal/"><ExternalLink className="ml-2 w-4 h-4"/>Visita</Link>
+        </Button>
+        <Button variant="outline" className="w-full col-span-3 sm:col-span-1" asChild>
+            <Link href="https://github.com/riccardodebellini/login-terminal"><GitHubIcon
+                className="ml-2 w-4 h-4  "/>Repository</Link>
+        </Button>
+    </div>
+    <Separator className='w-full'/>
+</div>
+
+## Funzionalità chiave
+- **Simulazione di autenticazione**: fornisce una richiesta realistica di nome utente/password.
+- **Payload dinamici**: visualizza testo, codici o elementi narrativi personalizzati allo sblocco.
+- **Pannello di amministrazione**: configurazione intuitiva sul dispositivo.
+## Stack tecnologico
+Sviluppato interamente in Flutter per prestazioni elevate e portabilità su dispositivi web e mobili.

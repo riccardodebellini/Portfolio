@@ -1,0 +1,38 @@
+import {Button} from "@/components/ui/button";
+import {Separator} from "@/components/ui/separator";
+import {ExternalLink, Github as GitHubIcon} from "lucide-react";
+import Link from "next/link";
+import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
+
+# Legacy Portfolio (V1)
+**Dove tutto ha avuto inizio.**
+<div className="not-prose mb-12">
+    <div className='grid grid-cols-3 gap-2 py-4'>
+        <Button variant="default" className="w-full mb-2 col-span-3 sm:col-span-2" asChild>
+            <Link href="https://labs.riccardo.is-a.dev/html-portfolio/"><ExternalLink className="ml-2 w-4 h-4"/>Visita</Link>
+        </Button>
+        <Button variant="outline" className="w-full col-span-3 sm:col-span-1" asChild>
+            <Link href="https://github.com/riccardodebellini/html-portfolio"><GitHubIcon
+                className="ml-2 w-4 h-4  "/>Repository</Link>
+        </Button>
+    </div>
+    <Separator className='w-full'/>
+</div>
+
+Benvenuti nella versione originale del mio portfolio personale. Questo progetto rappresenta il mio primo vero approccio al mondo dello sviluppo web: un ambiente privo di framework, librerie complesse o scorciatoie.
+
+Ho creato questo sito per padroneggiare le basi, scrivendo ogni riga di codice a mano per comprendere a fondo le fondamenta su cui si regge il web moderno.
+
+### Tech Stack
+Un approccio "Back to Basics":
+*   **HTML5 Semantico** – La struttura pura.
+*   **CSS3 (Vanilla)** – Stile e layout senza pre-processori e [classi personalizzate](/progetti/material-components)
+
+<div className="not-prose mb-12">
+    <Alert variant="default">
+        <AlertTitle>Nota</AlertTitle>
+        <AlertDescription>
+            Questo repository è mantenuto a scopo storico. Per vedere i miei lavori più recenti, visita il mio [nuovo portfolio](/)
+        </AlertDescription>
+    </Alert>
+</div>
